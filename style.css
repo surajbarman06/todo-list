@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+  }
+
+/* Styling TodoList body */
+.container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(135deg ,#153677,#4e085f);
+}
+
+.todo-app {
+    background-color: white;
+    width: 100%;
+    max-width: 420px;
+    margin: 50px auto;
+    padding:30px 15px;
+    border-radius: 10px;
+}
+
+/* TodoList heading position changed */
+.heading {
+    color: #005cc8;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* styling input-box , hover and focus */
+ .task-input {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    border: 2px solid #ff5945;
+    border-radius: 6px;
+    background: #eeefef;
+    border-radius: 8px;
+}
+
+#addbutton{
+    border: 50%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.task-input input {
+    width: 100%;
+    border: none;
+    background: transparent;
+}
+
+.task-input input:focus {
+    outline: none;
+}
+
+/* Styling icon size */
+.icon {
+    font-size: 1.5rem;
+    padding: 10px;
+    color: #ff5945;
+
+}
+
+/*Plus button hide when you did'nt type*/
+#addbutton {
+    display: none;
+}
+
+/* filter and clearAll button stylings */
+.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 4px;
+}
+.filters span{
+    margin: 0px 8px;
+    font-size: 17px;
+    color:#005cc8 ;
+    cursor: pointer;
+}
+
+.filters span:first-child{
+    margin-left: 0px;
+}
+
+.filters span.active{
+    color:#ff5945;
+}
+
+.controls .clear-btn{
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    background-color:#ff5945;
+    padding: 8px 14px;
+
+}
+
+.controls .clear-btn:hover{
+    opacity: 0.95;
+}
+
+
+/* Styling horizontal line */
+hr {
+    border: none;
+    border-bottom: 2px solid #ff5945;
+}
+
+/* item-list styling for to-list */
+.item-list{
+    margin: 20px 0px;
+    text-align: center;
+}
+.item-list.overflow{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 300px;
+  }
+
+/* scroll bar styling */
+.item-list::-webkit-scrollbar{
+    width: 5px;
+}
+.item-list::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 25px;
+  }
+.item-list::-webkit-scrollbar-thumb{
+    background: #e6e6e6;
+    border-radius: 25px;
+  }
+
+/* Styling li when task add by javascript */
+.item-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: auto;
+    margin-bottom:18px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    word-break: break-all;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    transition: transform 360ms ease;
+}
+
+.item-list li:last-child{
+    margin-bottom:0;
+}
+
+/* task will become bigger in size on hover */
+.item-list li:hover{
+    transform: scale(1.03);
+}
+
+
+.item-list li label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.item-list li label input{
+    margin-right: 16px;
+}
+
+/* when task is completed this styling will apply */
+.item-list li label span.checked{
+    text-decoration:line-through ;
+}
+
+
+span.icon{
+    position: relative;
+}
+
+/*Styling Delete button for task delete */
+.item-list li .del {
+    bottom: 2px;
+    rotate: 45deg;
+    position: absolute;
+    right: -35px;
+} 
+
+/* Delete button visible when you hover on task  */
+.item-list li:hover .del {
+    right: 7px;
+    transition: all 0.5s ease;
+}
+
+
+/* Extra styling */
+.total{
+    color: #005cc8;
+}
+.pendingTasks {
+    color: #ff5945;
+    padding-right: 3px;
+}

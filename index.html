@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <title>To Do List</title>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Todo list body -->
+      <div class="todo-app">
+        <header class="heading">To Do List</header>
+        <br />
+        <div class="task-input">
+          <!-- file icon  -->
+          <i class="icon uil uil-file-check-alt"></i>
+
+          <input type="text" placeholder="Add a new task" />
+
+          <!-- Add (plus) icon  -->
+          <button id="addbutton"><i class="icon uil uil-plus"></i></button>
+        </div>
+        <div class="controls">
+          <div class="filters">
+            <span id="all" class="active">All</span>
+            <span id="incomplete">Incomplete</span>
+            <span id="completed">Completed</span>
+          </div>
+          <button class="clear-btn">Clear All</button>
+        </div>
+        <hr />
+
+        <ul class="item-list"></ul>
+
+        <div class="total">
+          <span>
+            <span class="pendingTasks">0</span>
+            <!--Empty span for task count -->
+            tasks left
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
